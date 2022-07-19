@@ -7,6 +7,7 @@
           <v-card-title>Usuario</v-card-title>
           <v-card-text>{{user.Nombre}}</v-card-text>
           <v-card-text>{{user.email}}</v-card-text>
+          <v-btn block @click="$router.push(`/newUser/${user.id}`)">Editar</v-btn> <!--se crea ruta dinamica-->
         </v-card>
       </v-col>
     </v-row>

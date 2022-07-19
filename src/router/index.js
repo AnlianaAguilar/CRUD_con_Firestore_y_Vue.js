@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RegisterView from '@/views/RegisterView.vue'
+import EditUserView from '@/views/EditUserView.vue'
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,11 @@ const routes = [
   {
     path: '/newUser',
     component: RegisterView
+  },
+  {
+    path: '/newUser/:id',
+    component: EditUserView,
+    props:true
   },
   {
     path: '/about',
