@@ -2,8 +2,8 @@
   <v-container>
     <h1>Usuarios</h1>
     <v-row justify="center">
-      <v-col v-for="user in Usuarios" :key="user.id">
-        <v-card>
+      <v-col v-for="user in Usuarios" :key="user.id" cols="12" md="6">
+        <v-card >
           <v-card-title>Usuario</v-card-title>
           <v-card-text>{{user.Nombre}}</v-card-text>
           <v-card-text>{{user.email}}</v-card-text>
