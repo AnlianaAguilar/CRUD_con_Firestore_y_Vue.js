@@ -1,15 +1,26 @@
 <template>
-  <hello-world />
+  <div>
+    {{Usuarios}}
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
 
+import {mapActions, mapState} from 'vuex'
   export default {
     name: 'Home-view',
 
     components: {
-      HelloWorld,
+
     },
+    computed:{
+      ...mapState(['Usuarios'])
+    },
+    methods: {
+      ...mapActions(['fetchUsers'])
+    },
+    created(){
+      this.fetchUsers()
+    }
   }
 </script>
